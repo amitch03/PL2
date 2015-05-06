@@ -1,0 +1,5 @@
+/*Optimize.cs
+
+mini compiler optimizer
+all optimizations on IR will be done here
+*/

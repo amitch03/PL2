@@ -1,0 +1,5 @@
+fun Add (int i) int
+{
+   return (i + i);
+}
+

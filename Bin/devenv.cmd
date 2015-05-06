@@ -1,0 +1,1 @@
+"c:\Program Files (x86)\Visual Studio\Common7\IDE\devenv.exe" %*

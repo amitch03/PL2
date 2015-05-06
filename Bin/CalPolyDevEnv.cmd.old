@@ -1,0 +1,44 @@
+rem *************************************** PROJECT ***********************************************************
+
+set CALPOLY_ROOT=C:\CalPoly
+set CALPOLY_BIN=%CALPOLY_ROOT%\bin
+set COMPILER_ROOT=%CALPOLY_ROOT%\Compiler
+set COMPILER_SRC=%COMPILER_ROOT%\Src
+set COMPILER_BIN=%COMPILER_ROOT%\Bin
+
+rem *************************************** JAVA **************************************************************
+
+set JAVA_JDK=jdk1.8.0_20
+set JAVA_ROOT=c:\Program Files\Java\%JAVA_JDK%
+set JAVA_BIN=c:\Program Files\Java\%JAVA_JDK%\bin
+rem set PATH=%JAVA_BIN%;%CALPOLY_BIN%;%PATH%
+
+set JAVA_EXE=%JAVA_BIN%\java.exe
+set JAVAC_EXE=%JAVA_BIN%\javac.exe
+
+rem *************************************** .NET **************************************************************
+
+set DOTNET_TOOLS=C:\Program Files (x86)\Microsoft SDKs\Windows\v8.0A\bin\NETFX 4.0 Tools
+set PATH=%DOTNET_TOOLS%;%CALPOLY_BIN%;%PATH%
+
+rem *************************************** ANTLR *************************************************************
+
+set ANTLR_VERSION=3.5.2
+set ANTLR_ROOT=%CALPOLY_ROOT%\ANTLR\ANTLR_%ANTLR_VERSION%
+set ANTLR_JAR=%ANTLR_ROOT%\antlr-%ANTLR_VERSION%-complete.jar
+set CLASSPATH=.;%ANTLR_JAR%
+set ANTRL_EXE=java.exe -jar %ANTLR_JAR%
+
+rem *************************************** ALIASES ***********************************************************
+
+alias edenv "vi %CALPOLY_BIN%\CalPolyDevEnv.cmd"
+alias antlr "java -jar %ANTLR_JAR%" 
+alias eclipse "c:\CalPoly\Eclipse\eclipse.exe"
+alias classview "java -jar C:\CalPoly\ClassViewer\jCV-2.0.4\JavaClassViewer.jar"
+
+alias to_compiler "cd %COMPILER_SRC%"
+alias to_parser "cd %COMPILER_SRC%\Parser"
+alias to_test "cd %COMPILER_SRC%\Parser\Test"
+alias to_ir "cd %COMPILER_SRC%\IR"
+alias to_java "cd %JAVA_BIN%"
+

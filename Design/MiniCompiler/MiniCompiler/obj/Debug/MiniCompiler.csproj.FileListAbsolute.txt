@@ -1,0 +1,11 @@
+C:\CalPolyCompiler\Design\ConsoleApplication1\ConsoleApplication1\bin\Debug\MiniCompiler.exe.config
+C:\CalPolyCompiler\Design\ConsoleApplication1\ConsoleApplication1\obj\Debug\MiniCompiler.csprojResolveAssemblyReference.cache
+C:\CalPolyCompiler\Design\MiniCompiler\MiniCompiler\bin\Debug\MiniCompiler.exe.config
+C:\CalPolyCompiler\Design\MiniCompiler\MiniCompiler\obj\Debug\MiniCompiler.csprojResolveAssemblyReference.cache
+C:\CalPolyCompiler\Design\MiniCompiler\MiniCompiler\obj\Debug\Parser.cs
+C:\CalPolyCompiler\Design\MiniCompiler\MiniCompiler\obj\Debug\ParserListener.cs
+C:\CalPolyCompiler\Design\MiniCompiler\MiniCompiler\obj\Debug\ParserBaseListener.cs
+C:\CalPolyCompiler\Design\MiniCompiler\MiniCompiler\obj\Debug\ParserVisitor.cs
+C:\CalPolyCompiler\Design\MiniCompiler\MiniCompiler\obj\Debug\ParserBaseVisitor.cs
+C:\CalPolyCompiler\Design\MiniCompiler\MiniCompiler\obj\Debug\Lexer.cs
+C:\CalPolyCompiler\Design\MiniCompiler\MiniCompiler\obj\Debug\MiniCompiler.csproj.Antlr4GeneratedCodeFileListAbsolute.txt

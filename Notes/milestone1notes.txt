@@ -1,0 +1,134 @@
+Generate AST
+Print it and view it
+how to walk AST
+	// WALK RESULTING TREE
+	CommonTree t = (CommonTree)r.getTree(); // get tree from parser
+	// Create a tree node stream from resulting tree
+	CommonTreeNodeStream nodes = new CommonTreeNodeStream(t);	
+	Eval walker = new Eval(nodes); // create a tree parser
+	walker.prog(); // launch at start rule prog
+
+token files are always generate, but only used if another grammar wants to have the same
+token vocabulary as a previous grammar file
+
+! AST operator tells ANTLR to not generate a node for the token preceding the !
+^ AST operator tells ANTLR to generate a subtree root node for the token preceding the ^ (basically telling ANTLR it is an operator)
+@header in grammar file is where you put header statments for .cs file (using [files], etc. )
+@members in grammar file is where you put .cs file local variables 
+
+built AST or IR from prog rule, which is made of X | Y | Z
+X: a | b | nothing
+Y: c | d | Z
+Z: nothing
+
+using regular expression notation
+
+READ PG 200
+
+
+
+use ANTLR to construct a tree parser to check validity of program
+antlr.runtime.tree.TreeIterator
+				  .TreeParser
+				  .TreeFilter
+				  .TreePatternLexer
+				  .TreePatternParser
+				  .TreeVisitor
+
+//validity checks must include rules from language overview, 
+//outlined here
+
+boolean some_function_in_validity_checking_program()
+	IF MiniParser output is an error, return FALSE
+	_error 	= 	check_main() 
+			||	check_return() /* Maybe do this last?? */
+			||	check_EOF()
+			|| 	check_IDs()
+			||	check_whitespace???()
+			||	check_comments()
+			|| 	check_local_dont_hide_params()
+			||	check_struct_names_separate()
+RETURN _error
+	
+	
+boolean	check_main()
+	WHILE walking tree	
+		FOR EACH function
+			IF function_name == "main"
+				RETURN TRUE
+RETURN FALSE				
+
+
+boolean	check_return()
+	WHILE walking tree 	
+		FOR EACH leaf:
+			IF there is not a proper return statement
+				RETURN FALSE
+	
+
+RETURN TRUE
+
+	
+boolean check_EOF()
+	WHILE scanning file
+		IF last character read is not EOF
+			RETURN FALSE
+RETURN TRUE
+
+
+boolean	check_struct_names_separate()
+	WHILE walking tree
+		FOR EACH struct
+			IF namespace is the same as variables OR same as functions
+				RETURN FALSE
+RETURN TRUE
+
+
+boolean	check_IDs()
+	WHILE walking tree	
+		FOR EACH id
+			IF the first character is a number
+				WHILE id is not consumed
+					IF current character is not a number	
+						RETURN FALSE
+			ELSE IF first character is not a letter
+				RETURN FALSE
+			ELSE WHILE the id is not consumed	
+				IF current character is not alphanumeric
+					RETURN FALSE
+RETURN TRUE
+
+
+boolean check_comments()
+	WHILE scanning file	
+		FOR EACH '#'
+			IF stream following does not end in a new line character	
+				RETURN FALSE
+RETURN TRUE
+
+
+boolean	check_local_dont_hide_params()
+	WHILE walking tree
+		FOR EACH local variable
+			IF it hides a parameter
+				RETURN FALSE
+RETURN TRUE
+
+
+boolean check_whitespace??()
+...//tbd
+...//tbd
+RETURN BOOLEAN
+
+
+			
+			
+			
+			
+Visual Studio Debugger
+F10
+F11
+F11 Shift
+F5
+Turn all exceptions on -debug-options-exceptions
+

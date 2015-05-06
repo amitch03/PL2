@@ -1,0 +1,6 @@
+C:\CalPolyCompiler\Design\MiniCompiler\MiniCompiler\obj\Debug\Parser.cs
+C:\CalPolyCompiler\Design\MiniCompiler\MiniCompiler\obj\Debug\ParserListener.cs
+C:\CalPolyCompiler\Design\MiniCompiler\MiniCompiler\obj\Debug\ParserBaseListener.cs
+C:\CalPolyCompiler\Design\MiniCompiler\MiniCompiler\obj\Debug\ParserVisitor.cs
+C:\CalPolyCompiler\Design\MiniCompiler\MiniCompiler\obj\Debug\ParserBaseVisitor.cs
+C:\CalPolyCompiler\Design\MiniCompiler\MiniCompiler\obj\Debug\Lexer.cs
